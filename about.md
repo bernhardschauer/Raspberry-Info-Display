@@ -13,3 +13,18 @@ Der Raspberry ist mit Monitor, Maus, Tastatur und Strom verbunden. Die vorbereit
 # 3. Schritt - Erster Start
 Nach der Installation startet das Betriebssystem erstmals und schlussendlich wird der Desktop angezeigt.
 An meinem Monitor sind außen um das Bild schwarze Ränder (Oversampling). Unter Einstellungen - Raspberry-Pi-Konfiguration können diese ausgeblendet werden (Übertastung deaktivieren)
+
+# 4. Schritt - Aktualisieren
+
+'sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install unclutter
+
+sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
+
+#@xscreensaver -no-splash  # comment this line out to disable screensaver
+@xset s off
+@xset -dpms
+@xset s noblank
+@chromium-browser -noerrdialogs --kiosk http://solartv.solarweb.com
+'
