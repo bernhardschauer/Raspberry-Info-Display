@@ -26,5 +26,5 @@ sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
 @xset s off
 @xset -dpms
 @xset s noblank
-@chromium-browser -noerrdialogs --kiosk http://solartv.solarweb.com
+@chromium-browser -noerrdialogs --disable-restore-session-state --disable-infobars --kiosk http://solartv.solarweb.com
 '
